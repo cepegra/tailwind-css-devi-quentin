@@ -218,5 +218,12 @@
 
     <input type="button" value="Soumettre" class="cursor-pointer border border-green-500 rounded w-fit py-1 px-2 mx-auto hover:bg-green-200">
   </form>
+
+  <script>
+    // Champs 'Date du formulaire' pré-remplie
+    let d = new Date().toLocaleDateString()
+    let date = d.slice(6,10) + "-" + d.slice(3,5) + "-" + d.slice(0,2)
+    document.getElementById('date_formulaire').value = date
+  </script>
 </body>
 </html>
