@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="src/css.css" rel="stylesheet">
+  <title>Formulaire Quentin</title>
+
+  <style type="text/tailwindcss">
+    @layer components {
+      .input {
+        @apply border-solid border border-black rounded p-1 hover:border-sky-500 focus:border-sky-500 outline-none;
+      }
+      
+      .fieldset {
+        @apply flex flex-col gap-3 border-solid border border-black p-5;
+      }
+      
+      .item {
+        @apply flex container flex-row justify-between items-center border-b pt-2 pb-2;
+      }
+
+      .checkbox {
+        @apply flex flex-col items-center gap-1 p-2;
+      }
+
+      ._choix_multiple {
+        @apply grid grid-cols-3 grid-rows-2 border;
+      }
+
+      .legend {
+        @apply pl-2 pr-2;
+      }
+    }
+  </style>
+</head>
+<body class="container mx-auto flex flex-col p-5">
+  <h1 class="text-3xl font-bold">
+    Formulaire
+  </h1>
+  
+  <form action="" method="post" class="flex flex-col gap-5">
+    <fieldset class="fieldset">
+      <legend class="legend">Contexte</legend>
+      
+      <div class="item">
+        <label for="entree">Date d'entree</label>
+        <input type="date" class="input" name="date_entree" id="date_entree">
+      </div>
+      
+      <div class="item">
+        <label for="entree">Date de sortie</label>
+        <input type="date" class="input" name="date_sortie" id="date_sortie">
+      </div>
+      
+      <div class="item">
+        <label for="entree">Date du formulaire</label>
+        <input type="date" class="input" name="date_formulaire" id="date_formulaire">
+      </div>
+    </fieldset>
+    
+    <fieldset class="fieldset">
+      <legend class="legend">Coordonnées</legend>
+      
+      <div class="item">
+        <label for="centre">Centre</label>
+        <input type="text" class="input" name="centre" id="centre">
+      </div>      
+
+      <div class="item">
+        <label for="nom_formateur">Nom du formateur</label>
+        <input type="text" class="input" name="nom_formateur" id="nom_formateur">      
+      </div>
+      
+      <div class="item">
+        <label for="prenom_formateur">Prénom du formateur</label>
+        <input type="text" class="input" name="prenom_formateur" id="prenom_formateur">
+      </div>
+      
+      <div class="item">
+        <label for="nom_stagiaire">Nom du stagiaire</label>
+        <input type="text" class="input" name="nom_stagiaire" id="nom_stagiaire">
+      </div>
+      
+      <div class="item">
+        <label for="prenom_stagiaire">Prénom du stagiaire</label>
+        <input type="text" class="input" name="prenom_stagiaire" id="prenom_stagiaire">
+      </div>      
+    </fieldset>
+    
+    <fieldset class="fieldset">
+      <legend class="first-letter:capitalize legend">évaluation</legend>
+      
+      <label for="q1">Question 1</label>
+      <div class="_choix_multiple">
+        <div class="checkbox">
+          <input type="radio" name="r1" id="r1-1">
+          <label for="r1-1">Réponse 1</label>
+        </div>       
+        
+        <div class="checkbox">
+          <input type="radio" name="r1" id="r1-2">
+          <label for="r1-2">Réponse 2</label>
+        </div>
+        <div class="checkbox">
+          <input type="radio" name="r1" id="r1-3">
+          <label for="r1-3" class="font-bold">Réponse 3</label>
+        </div>
+        <div class="checkbox">
+          <input type="radio" name="r1" id="r1-4">
+          <label for="r1-4">Réponse 4</label>
+        </div>
+      </div>
+
+      <label for="q2">Question 2</label>
+      <div class="_choix_multiple">
+        <div class="checkbox">
+          <input type="radio" name="r2" id="r2-1">
+          <label for="r2-1">Réponse 1</label>
+        </div>        
+        <div class="checkbox">
+          <input type="radio" name="r2" id="r2-2">
+          <label for="r2-2">Réponse 2</label>
+        </div>
+        <div class="checkbox">
+          <input type="radio" name="r2" id="r2-3">
+          <label for="r2-3" class="font-bold">Réponse 3</label>
+        </div>
+        <div class="checkbox">
+          <input type="radio" name="r2" id="r2-4">
+          <label for="r2-4">Réponse 4</label>
+        </div>
+      </div>
+
+      <label for="q3">Question 3</label>
+      <div class="_choix_multiple">
+        <div class="checkbox">
+          <input type="radio" name="r1-3" id="r3-1">
+          <label for="r3-1">Réponse 1</label>
+        </div>        
+        <div class="checkbox">
+          <input type="radio" name="r3" id="r3-2">
+          <label for="r3-2">Réponse 2</label>
+        </div>
+        <div class="checkbox">
+          <input type="radio" name="r3" id="r3-3">
+          <label for="r3-3" class="font-bold">Réponse 3</label>
+        </div>
+        <div class="checkbox">
+          <input type="radio" name="r3" id="r3-4">
+          <label for="r3-4">Réponse 4</label>
+        </div> 
+      </div>
+
+      <label for="q4">Question 4</label>
+      <div class="_choix_multiple">
+        <div class="checkbox">
+          <input type="radio" name="r4" id="r4-1">
+          <label for="r4-1">Réponse 1</label>
+        </div>       
+        
+        <div class="checkbox">
+          <input type="radio" name="r4" id="r4-2">
+          <label for="r4-2">Réponse 2</label>
+        </div>
+        <div class="checkbox">
+          <input type="radio" name="r4" id="r4-3">
+          <label for="r4-3" class="font-bold">Réponse 3</label>
+        </div>
+        <div class="checkbox">
+          <input type="radio" name="r4" id="r4-4">
+          <label for="r4-4">Réponse 4</label>
+        </div> 
+      </div>
+
+      <label for="q5">Question 5</label>
+      <div class="_choix_multiple">
+        <div class="checkbox">
+          <input type="radio" name="r5" id="r5-1">
+          <label for="r5-1">Réponse 1</label>
+        </div>        
+        <div class="checkbox">
+          <input type="radio" name="r5" id="r5-2">
+          <label for="r5-2">Réponse 2</label>
+        </div>
+        <div class="checkbox">
+          <input type="radio" name="r5" id="r5-3">
+          <label for="r5-3" class="font-bold">Réponse 3</label>
+        </div>
+        <div class="checkbox">
+          <input type="radio" name="r5" id="r5-4">
+          <label for="r5-4">Réponse 4</label>
+        </div> 
+      </div>
+
+      <label for="q6">Question 6</label>
+      <div class="_choix_multiple">
+        <div class="checkbox">
+          <input type="radio" name="r6" id="r6-1">
+          <label for="r6-1">Réponse 1</label>
+        </div>        
+        <div class="checkbox">
+          <input type="radio" name="r6" id="r6-2">
+          <label for="r6-2">Réponse 2</label>
+        </div>
+        <div class="checkbox">
+          <input type="radio" name="r6" id="r6-3">
+          <label for="r6-3" class="font-bold">Réponse 3</label>
+        </div>
+        <div class="checkbox">
+          <input type="radio" name="r6" id="r6-4">
+          <label for="r6-4">Réponse 4</label>
+        </div> 
+      </div>
+    </fieldset>
+
+    <input type="button" value="Soumettre" class="cursor-pointer border border-green-500 rounded w-fit py-1 px-2 mx-auto hover:bg-green-200">
+  </form>
+</body>
+</html>
